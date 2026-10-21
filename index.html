@@ -412,6 +412,25 @@ h2 em{font-style:italic;color:var(--terra)}
 .plv b{display:block;font-family:var(--serif);font-size:2.6vh;color:var(--plum)}
 .plv span.d{display:block;font-size:1.9vh;color:#5d4f5d;margin-top:.3vh}
 .dual{gap:4vw}.dual .it .qrbig{width:24vh;height:24vh}.dual-book{height:42vh}
+
+.chars{display:grid;grid-template-columns:1fr 1fr;gap:2.4vh;margin-top:2.2vh;max-width:92vw}
+.chr{border-radius:2.2vh;padding:2.4vh 2.8vh;color:#fff}
+.chr.al{background:linear-gradient(150deg,#e8956b,#c0577a)}
+.chr.plr{background:linear-gradient(150deg,#9b8ec4,#6f8fb8)}
+.chr .top{display:flex;align-items:center;gap:2vh}
+.chr .e{font-size:6vh;line-height:1}
+.chr b{display:block;font-family:var(--serif);font-size:3.6vh;line-height:1.1}
+.chr small{display:block;font-size:1.7vh;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--cream);margin-top:.4vh}
+.chr ul{list-style:none;margin-top:1.6vh;display:grid;gap:.9vh}
+.chr li{font-size:2.15vh;line-height:1.35;color:rgba(255,255,255,.97)}
+.chr li i{font-style:normal;font-weight:700;color:var(--cream)}
+.race{margin-top:2vh;max-width:92vw;background:#fff;border:1px solid rgba(74,47,71,.1);border-radius:2vh;padding:1.8vh 2.4vh}
+.race .rl{font-size:1.5vh;letter-spacing:2.4px;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:1vh}
+.race .row{display:grid;grid-template-columns:16vh 1fr;gap:1.6vh;align-items:center;margin-top:.8vh}
+.race .row span{font-size:2vh;font-weight:600;color:var(--plum)}
+.race .bar2{height:3.6vh;border-radius:2vh;display:flex;align-items:center;padding:0 1.6vh;color:#fff;font-size:1.9vh;font-weight:600;white-space:nowrap}
+.race .bar2.a{width:14%;background:linear-gradient(90deg,#e8956b,#c0577a)}
+.race .bar2.p{width:78%;background:linear-gradient(90deg,#9b8ec4,#6f8fb8)}
 .helpbox{position:fixed;inset:0;background:rgba(26,21,36,.92);color:#fff;z-index:60;display:none;align-items:center;justify-content:center;font-family:'Poppins',sans-serif}.helpbox.show{display:flex}.helpbox div{max-width:520px;font-size:18px;line-height:1.9}.helpbox b{color:#ffd9b8;display:inline-block;min-width:110px}.helpbox h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:14px}
 </style>
 </head>
@@ -559,6 +578,21 @@ h2 em{font-style:italic;color:var(--terra)}
 <div class="trap lo"><b>Stuck low: shutdown</b><span>Heavy mornings, nothing worth starting. You cancel plans and feel nothing.</span></div>
 <div class="trap hi"><b>Stuck high: overdrive</b><span>Irritable, wired and tired, unable to switch off.</span></div>
 </div><div class="neuro"><span class="lb">&#129504; Neuroscience</span><p>Both extremes are signs of a nervous system stuck on one station. Shutdown and freeze are described as parasympathetic states too (polyvagal theory, still debated).</p><span class="src">Porges 2011, The Polyvagal Theory</span></div>
+</section>
+
+<section class="slide dense">
+<p class="kicker">Two characters in your head</p>
+<h2 style="max-width:34ch">The alarm and <em>the planner.</em></h2>
+<div class="chars">
+<div class="chr al"><div class="top"><span class="e">&#128680;</span><div><b>The alarm</b><small>the amygdala</small></div></div>
+<ul><li><i>Where:</i> deep in the brain, an almond-sized cluster</li><li><i>Job:</i> scans for threat and reacts in milliseconds</li><li><i>Style:</i> fast, loud, felt in the body</li><li><i>When it leads:</i> you snap, freeze, rush or go numb</li></ul></div>
+<div class="chr plr"><div class="top"><span class="e">&#129517;</span><div><b>The planner</b><small>the prefrontal cortex</small></div></div>
+<ul><li><i>Where:</i> right behind your forehead</li><li><i>Job:</i> plans, weighs, reframes and chooses</li><li><i>Style:</i> slower, quieter, in words</li><li><i>When it leads:</i> you pause and choose your answer</li></ul></div>
+</div>
+<div class="race"><div class="rl">Who arrives first?</div>
+<div class="row"><span>The alarm</span><div class="bar2 a">12 ms</div></div>
+<div class="row"><span>The planner</span><div class="bar2 p">seconds, and only when you feel safe</div></div></div>
+<div class="neuro" style="margin-top:2vh"><span class="lb">&#129504; Neuroscience</span><p>The amygdala gets sensory input through a fast route via the thalamus, in about <b>12 milliseconds</b>, before the cortex has finished processing it. The <b>prefrontal cortex</b> answers more slowly, and high levels of stress hormones weaken its networks.</p><span class="src">LeDoux, The Emotional Brain (1996) &#183; Arnsten 2009, Nat Rev Neurosci 10:410-422</span></div>
 </section>
 
 <section class="slide dense">
@@ -715,7 +749,7 @@ h2 em{font-style:italic;color:var(--terra)}
 <div class="helpbox" id="helpbox"><div><h3>How to present</h3><b>Arrows / Space</b> next and back<br><b>F</b> fullscreen<br><b>C</b> start the 2-minute Check-In countdown (slide 2)<br><b>+</b> add 30 seconds<br><b>T</b> show a 25-minute clock<br><b>H</b> show or hide this help</div></div>
 <div class="clock" id="clock">0:00 / 25:00</div>
 <div style="display:none"><span id="notetext"></span></div>
-<div class="ctrl"><button id="prev">&#8249;</button><span class="cnt" id="cnt">1 / 23</span><button id="next">&#8250;</button></div>
+<div class="ctrl"><button id="prev">&#8249;</button><span class="cnt" id="cnt">1 / 24</span><button id="next">&#8250;</button></div>
 
 <script>
 (function(){
